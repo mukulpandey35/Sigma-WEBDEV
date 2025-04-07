@@ -1,9 +1,0 @@
-body{
-    background-color: red;
-    color: white;
-} 
- /* The above code will change the background color of the body to red and the text color to white. 
- 3. Linking CSS to HTML 
- To link the CSS file to the HTML file, you need to use the  <link>  tag in the  <head>  section of the HTML file. 
- Here is the code to link the CSS file to the HTML file: 
- <!DOCTYPE html> */
