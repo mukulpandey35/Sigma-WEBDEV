@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecters in CSS</title>
+    <style>
+        /* element selector */
+        /* div{
+            background-color: red;
+        } */
+        /* class selector */
+        .red{
+            background-color: red;
+        }
+        /* id selector */
+        #green{
+            background-color: green;
+        }
+        /* child selector */
+        div > p{
+            background-color: blue;
+        }
+        /* descendant selector */
+        div p{
+            
+            background-color: rgb(197, 246, 4);
+        }
+        /* universal selector */
+        *{
+            /* univversal selectorer applies on all elements of the page but it is not recommended to use it as it will apply on all elements and will override all other styles */
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+        /* Pseudo selector */
+        a:visited{
+            color: red;
+        }
+        a:hover{
+           background-color: blue;
+        }
+        a:active{
+            background-color: rgb(4, 5, 1);
+        }
+        a:link{
+            color: rgb(3, 233, 214);
+        }
+        p:first-child{
+            /* this selector will select all the first child as parahraph of the parent element and apply the styles on it */
+            background-color: rgb(189, 249, 9);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="red"> 
+        I am a div using class selector 
+        <p>I am a paragraph inside a div using child selector it only applies on direct child but when there is a descendant selector then child selector is secondry. </p>
+        <article>
+            <p>
+                I am a paragraph inside an article inside a div using descendant selector it applies on all descendants of the div whether direct or indirect child
+            </p>
+        </article>
+    </div>
+
+    <div id="green">
+        I am another div using id selector
+    </div>
+
+    <a href="https://support.google.com/maps/answer/91511">Go to link</a>
+    <a href="https://www.linkedin.com/feed/">Go to link</a>
+</body>
+</html>
