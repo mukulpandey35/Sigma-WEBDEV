@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Box Model </title>
+    <style>
+        .box {
+            background-color: aquamarine;
+        }
+        .box1 {
+            color:rosybrown ;
+            padding: 10px;
+            margin: 5px;
+            border: 5px solid black;
+            height: 150px; 
+            /* This is the height of the box which is only for the content area */
+            box-sizing: border-box;
+            /* This is the height of the box which is for the content area + padding + border but margin not included */
+        }
+        /* The box-sizing property is used to include padding and border in the element's total width and height. */
+        /* the margin colapse is a property of the box model that allows the margin of two adjacent elements to combine into a single margin. */
+        /* This means that if two elements have margins that touch each other, the larger of the two margins will be used. */ 
+        /* This can be useful for creating consistent spacing between elements, but it can also lead to unexpected results if not used carefully. */
+        /* The margin collapse property is applied to block-level elements, such as divs and paragraphs. */
+        /* It does not apply to inline elements, such as spans and links. */
+        /* The margin collapse property can be controlled using the margin property. */
+
+
+        .box2 {
+            color:blueviolet ;
+            padding: 10px;
+            margin: 35px;
+            border: 5px solid rgb(147, 243, 2);
+            height: 150px; 
+            /* This is the height of the box which is only for the content area */
+            box-sizing: border-box;
+            /* This is the height of the box which is for the content area + padding + border but margin not included */
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+</body>
+</html>
