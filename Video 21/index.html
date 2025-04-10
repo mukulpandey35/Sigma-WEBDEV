@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        .cred {
+            color: red;
+        }
+        
+        .cyellow {
+            color: yellow;
+        }
+        .cblue {
+            color: rgb(16, 175, 223);
+        }
+        ol {
+            margin-left: 20px;
+            color: #c415f0;
+        }
+        .p1 {
+            margin: 10px;
+            color: #c415f0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="cred cyellow cblue">Here we are dealing with Specificity in CSS</h1>
+        <p>Specificity is a mechanism that determines which CSS rule is applied by the browser when multiple rules could apply to the same element.</p>
+        <p>It is calculated based on the types of selectors used in the CSS rule.</p>
+        <p>There are four types of selectors, and they are ranked in the following order:</p>
+        <ol>
+            <li>Inline styles (e.g., <code style="color: red;">style="color: red;"</code>)</li>
+            <li>ID selectors (e.g., <code>#id</code>)</li>
+            <li>Class selectors, attribute selectors, and pseudo-classes (e.g., <code>.class</code>, <code>[type="text"]</code>, <code>:hover</code>)</li>
+            <li>Type selectors and pseudo-elements (e.g., <code>div</code>, <code>::before</code>)</li>
+        </ol>
+        <p>When multiple rules apply to the same element, the browser will apply the rule with the highest specificity.</p>
+        <p>For example, if you have a rule that applies to all <code>div</code> elements and another rule that applies to a specific <code>div</code> with an ID of <code>#myDiv</code>, the rule for <code>#myDiv</code> will take precedence.</p>
+        <p class="p1">In the case of a tie, the last rule defined in the CSS will be applied.</p>
+        <p>Understanding specificity is crucial for writing maintainable and predictable CSS.</p>
+        <p>It helps you avoid conflicts and ensures that your styles are applied as intended.</p>
+        <p>In summary, specificity is a key concept in CSS that determines which styles are applied to an element based on the selectors used.</p>
+        <h2>This all are controled by Cascade rule </h2>
+        <h2>Blog <a href="https://www.codewithharry.com/tutorial/css-specificity/">CSS specificity by Harry</a> </h2>
+        <!-- <a href="https://www.codewithharry.com/tutorial/css-specificity/"></a> -->
+
+    </div>
+</body>
+</html>
