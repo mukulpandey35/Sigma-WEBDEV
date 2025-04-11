@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing in CSS</title>
+    <style>
+        /* html{
+            font-size: 10px;
+        } */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid black;
+            box-sizing: border-box;
+            /* Include padding and border in the element's total width and height */
+            /* width: 1521px; */
+            background-color: lightseagreen;
+            /* width: 100vw; 100% of the viewport width */
+            width: 80vw;
+            /* 80% of the viewport width */
+            height: 10vh;
+            /* 80% of the viewport height */
+            margin: auto;
+            /* Center the box horizontally */
+            /* the margin auto only center the block element not inline element */
+
+
+        }
+
+        .container {
+            border: 2px solid black;
+            box-sizing: border-box;
+            /* Include padding and border in the element's total width and height */
+            /* width: 1521px; */
+            background-color: lightseagreen;
+            /* width: 100vw; 100% of the viewport width */
+            width: 80vw;
+            /* 80% of the viewport width */
+            min-height: 80vh;
+            /* 80% of the viewport height */
+            margin: 23px auto;
+            /* here the 23px is the margin top and bottom and auto is the margin left and right */
+            /* the margin auto only center the block element not inline element */
+            font-size: 16px;
+        }
+
+        .container p {
+            font-size: 2em;
+            /* 1.8 times the font size of the parent element */
+            /* em is used to inherit the font size from the parent element and multiply it by the given value */
+            font-size: 2rem;
+            /* 2 times the font size of the root element */
+            /* rem is used to inherit the font size from the root element and multiply it by the given value */
+        }
+
+        .container ol {
+            margin-top: 10px;
+            padding-top: 40px;
+            padding-left: 20px;
+
+            color: rgb(38, 10, 247);
+        }
+
+        .conta {
+            border: 4px solid black;
+            box-sizing: border-box;
+            margin: 23px auto;
+            width: 80vw;
+
+        }
+
+        .conta p {
+            padding-left: 10px;
+        }
+
+        .conta ol {
+            margin-top: 10px;
+            padding-top: 40px;
+            padding-left: 20px;
+            
+
+
+            color: rgb(38, 10, 247);
+        }
+        .abc{
+            color: #99ff00;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        This is box.
+    </div>
+    <div class="container">
+        <p>
+            <p class="abc">
+                 What I understood is:
+            px depends on resolution,
+            vh vw are device specific,
+            vmin and vmax depends on orientation,
+            em is multiplier on current value,
+            rem is a multiplier on current value in respective to the root element,
+            % depends on parent element.
+
+            </p>
+            
+           
+
+            <br>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus corrupti aliquam rerum optio ullam ut
+            sapiente accusamus delectus qui? Vero repellendus dolor aliquam eum eaque, animi eveniet impedit pariatur
+            laboriosam similique alias quia repellat aperiam officia totam, quod facilis quidem expedita. In id debitis
+            tenetur atque ut fugit, commodi tempora.
+
+        <ol>
+
+            <li>rem</li>
+            <li>em</li>
+            If em and rem are used in the same element then rem will be applied.
+
+        </ol>
+        </p>
+        <h1><a
+                href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units">More
+                about CSS Sizing </a></h1>
+    </div>
+
+    <div class="conta">
+        <p>
+            The concept of vmin and vmax is used to set the width and height of the element in the viewport.
+            vmin means the minimum value of the viewport width and height.
+            vmax means the maximum value of the viewport width and height.
+        <ol>
+            <li>vmin</li>
+            <li>vmax</li>
+            If vmin and vmax are used in the same element then vmax will be applied.
+        </ol>
+        </p>
+    </div>
+    <h1></h1>
+
+</body>
+
+</html>
