@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Position</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            border: 2px solid black;
+            height: 133px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
+
+        }
+        .box1{
+            background-color: rgb(12, 236, 165);
+            /* position: absolute; */
+            /* the postion absolute is used to position the element relative to its nearest positioned ancestor (i.e., the nearest ancestor that is not statically positioned). If there is no such ancestor, it will be positioned relative to the initial containing block (usually the viewport). */
+            /* if any ancestor is positioned, the element will be positioned relative to that ancestor. */
+            /* the element will be positioned relative to the viewport. */
+            top: 20px;
+            left: 19px;
+        }
+        .box2{
+            background-color: rgba(255, 255, 0, 0.603);
+            position:relative;
+            /* By default, the position of an element is static. This means that the element will be positioned according to the normal flow of the document. */
+            /* the postion relative is used to position the element relative to its normal position. */
+
+            top: 35px; 
+            /* top will move the element down by 35px from its normal position. */
+            left: 26px;
+            /* left will move the element to the right by 26px from its normal position. */
+            /* the element will be moved down and to the right from its normal position. */
+            z-index: 1;
+            /* the element will be positioned on top of other elements with a lower z-index. */
+            /* The z-index property only works on positioned elements (i.e., elements with a position value other than static). */
+            /* The z-index property can take positive and negative values. A higher z-index value means the element will be positioned on top of elements with a lower z-index value. */
+            /* a negative z-index value will position the element behind other elements with a higher z-index value. */;
+        }
+        .box3{
+            background-color: rgba(9, 170, 244, 0.603);
+            /* position: fixed; */
+            /* the postion fixed is used to position the element relative to the viewport. */
+            /* The element will remain in the same position even when the page is scrolled. */
+            /* top: 20px;
+            left: 20px; */
+            /* height: 423px;
+            width: 160px; */
+        }
+        .box4{
+            background-color: rgb(123, 46, 223);
+            /* position: sticky; */
+            /* the postion sticky is used to position the element based on the user's scroll position. */
+            /* The element will "stick" to a specified position when the user scrolls to that position. */
+            /* The element will remain in the same position until the user scrolls back up. */
+            top: 20px;
+            left: 20px;
+            /* height: 423px;
+            width: 90%; */
+            
+        }
+        .parent{
+            /* position: relative; */
+            padding: 5px;
+            border: 3px solid rgb(239, 25, 25);
+            margin: auto;
+            height: 90vmin;
+            width: 90vw;
+            color: rgb(229, 255, 0);
+            
+
+        }
+        .text{
+            background-color: rgb(7, 0, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="parent">
+
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+<p class="text"> exception: tranform , filter , perspective properties to the parent element can affect the position of the child elements.And it will make the child elements positioned relative to the parent element. without the postion property in the parent element. 
+    <br>
+    The child elements will be positioned relative to the parent element.</p>
+    </div>
+    
+</body>
+</html>
