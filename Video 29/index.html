@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Card Design</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .box {
+      border: none;
+      width: 350px;
+      background-color: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+    .img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+    .img img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+    }
+    .text {
+      padding: 20px;
+      text-align: center;
+    }
+    .capsule {
+      background-color: aquamarine;
+      padding: 6px 16px;
+      border-radius: 50px;
+      margin: 5px;
+      font-size: 13px;
+      font-weight: bold;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+    .capsule:hover {
+      background-color: #76e3c5;
+    }
+    .text h2 {
+      margin: 15px 0 10px;
+      font-size: 24px;
+      color: #333;
+    }
+    .text p {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: rgb(169, 238, 78);
+      border: none;
+      border-radius: 30px;
+      padding: 10px 25px;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+    .btn a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    .btn:hover {
+      background-color: #9ed634;
+      box-shadow: 0 0 10px #9ed634, 0 0 20px #9ed634;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <div class="img">
+      <img src="20250124_212033.jpg" alt="Profile Image">
+    </div>
+
+    <div class="text">
+      <span class="capsule">Fresher</span>
+      <span class="capsule">2025</span>
+
+      <h2>About Me</h2>
+      <p>
+        I am a motivated fresher eager to contribute to team success through hard work, attention to detail, and excellent organizational skills. I am passionate about learning new technologies and growing professionally while delivering value to the organization.
+      </p>
+
+      <button class="btn">
+        <a href="https://www.linkedin.com/in/mukulpandey35/" target="_blank">LinkedIn</a>
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
