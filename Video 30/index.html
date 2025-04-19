@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Variables</title>
+    <style>
+        :root {
+            --color: rgb(12, 144, 111);
+            --seccolor: rgb(145, 25, 185);
+
+            /* the root selector is used to define global variables in CSS.
+            these variables can be used anywhere in the document. */
+            --defopacity: 0.5;
+            --defpadding: 10px 20px;
+            /* these variables are used to define default values for opacity and padding. */
+            /* these variables can be used anywhere in the document. */
+
+            /* In the :root selector in CSS, you can define custom properties (variables) that can store reusable values. 
+            These variables can hold any valid CSS value. Here are the types of values you can define:
+
+            Colors:
+            
+            Example: --primary-color: #ff5733;
+            Useful for maintaining consistent color schemes.
+            Lengths:
+            
+            Example: --spacing: 16px;
+            Can be used for margins, paddings, widths, etc.
+            Font Sizes:
+
+            Example: --base-font-size: 16px;
+            Helps in maintaining consistent typography.
+            Opacity:
+
+            Example: --default-opacity: 0.8;
+            Useful for transparency settings.
+            Padding and Margin (Shorthand):
+
+            Example: --default-padding: 10px 20px;
+            Can store shorthand values for spacing.
+            Borders:
+
+            Example: --border-radius: 5px;
+            Useful for consistent border styles.
+            Box Shadows:
+
+            Example: --box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            For consistent shadow effects.
+            Gradients:
+
+            Example: --gradient: linear-gradient(to right, #ff7e5f, #feb47b);
+            Useful for background styles.
+            Z-Index:
+
+            Example: --z-index-modal: 1000;
+            For layering elements.
+            Animation Durations:
+
+            Example: --animation-duration: 0.3s;
+            Helps in maintaining consistent animation timing.
+            Custom Units:
+
+            Example: --container-width: 80%;
+            For layout-related values. */
+
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav {
+            background-color: var(--color);
+            background-color: rgb(151, 202, 63);
+        }
+
+        .container {
+            background-color: var(--seccolor);
+            /* background-color:rgb(151, 181, 63); */
+        }
+
+        ul {
+            display: flex;
+            /* padding: 10px 20px; */
+            opacity: var(--defopacity);
+            /* here we have used the variable defopacity defined in the root selector. */
+
+        }
+
+        ul li {
+            padding: var(--defpadding);
+            list-style: none;
+            color: var(--seccolor);
+            border: 5px solid var(--seccolor);
+        }
+
+        ul li:first-child {
+
+            --color: rgb(251, 149, 5);
+            background-color: var(--color);
+
+            /* here we have overriden the color variable for this li element only by defining it again as a local variable. */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, nostrum? Et aperiam quo, quae blanditiis non
+        unde voluptates laudantium modi explicabo error voluptatibus perferendis enim perspiciatis, praesentium
+        dignissimos ipsum, placeat quas omnis repellat assumenda asperiores nihil. Enim ut dolor obcaecati quas! Ut quam
+        consequatur eius!
+    </div>
+</body>
+
+</html>
