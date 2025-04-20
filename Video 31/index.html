@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS- Media Queries</title>
+
+    <style>
+        body{
+            background-color: azure;
+        }
+        @media only screen and (max-width:455px){
+            body{
+                background-color: yellow;
+            }
+            .boxes{
+                flex-direction: column;
+            }
+        }
+        @media screen and (orientation: landscape){
+            body{
+                background-color: rgb(21, 235, 14);
+                border: 3px solid black;
+            }
+        }
+
+        .boxes{
+            display: flex;
+        }
+        .box{
+            height: 345px;
+            width: 345px;
+            background-color: rgb(4, 119, 119);
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>Hey i am a azure background body</div>
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
