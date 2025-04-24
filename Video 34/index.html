@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Float and Clear</title>
+    <style>
+        .cards{
+            border: 2px solid black;
+            display: flow-root;
+
+            /* the flow root property is used to create a new block formatting context, which allows the container to contain floated elements without collapsing. */
+            /* This is useful when you want to contain floated elements within a parent container. */
+        }
+        img{
+            float:right;
+            
+            /* the float property is used to position an element to the left or right of its container, allowing other content to flow around it.
+            In this case, the image is floated to the left, allowing the text to wrap around it.
+            but the float property does not restrict the image to a specific width or height, so it will take up its natural size. It don't prevent the element from overflowing.
+             */
+        }
+        .card{
+            border: 2px solid red;
+            
+        }
+        .card:nth-child(3){
+            background-color: lightblue;
+            clear: right;
+            /* The clear property is used to control the behavior of floated elements. It specifies whether an element should be moved below any preceding floated elements on the left, right, or both sides.*/
+            /* Clear property kisi bhi element ko float hone se rokta hai. */
+            /* In this case, the clear property is used to ensure that the third card is displayed below the floated image. */
+        }
+    </style>
+</head>
+<body>
+    <div class="cards">
+
+        <img src="https://picsum.photos/id/1015/200/300" alt="image" width="150">
+
+        <div class="card" >
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere id deserunt rerum corrupti est explicabo blanditiis magnam ratione, eum facilis perspiciatis, asperiores assumenda obcaecati rem excepturi debitis doloribus placeat in ea quod illo exercitationem impedit. Dignissimos ipsam beatae reprehenderit autem adipisci nemo odit pariatur laborum, voluptas quasi aliquam, inventore aspernatur soluta porro harum eligendi blanditiis? Maiores numquam accusamus possimus nam nihil qui vero quod eos cumque minus consectetur, nostrum perferendis aut officiis, necessitatibus natus iste fuga atque commodi iure repellat. Atque dolor vitae exercitationem accusantium id ratione. Nam officia perspiciatis eveniet asperiores eligendi commodi error quaerat illo non facere! A?
+        </div>
+        <div class="card">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde expedita tenetur dolores incidunt modi omnis sed. Possimus fugit suscipit recusandae numquam neque quod soluta voluptatum voluptatem dolore ab illum saepe, id quasi eius dolorum cupiditate in voluptas, dolorem libero! Repellendus magnam molestiae pariatur facere saepe rem debitis delectus optio minima iure asperiores, reiciendis, voluptates aliquid reprehenderit animi libero consequuntur veritatis accusantium molestias tenetur perferendis quisquam! Quaerat ducimus vitae error totam, reiciendis nam architecto blanditiis sapiente. Iusto dolorum fuga nihil impedit, a fugit, ipsum, eius magnam sed nisi rem praesentium repudiandae quis. Ad rerum beatae vel. Nisi, quasi? Consectetur odit magni quod blanditiis eveniet, repellendus maxime dolores ad fugiat ipsa et beatae nesciunt amet reprehenderit sapiente corporis quis impedit. Quibusdam quasi deleniti quos, odit, a earum numquam aspernatur, dolores quis consectetur pariatur ex minima sit perferendis aliquid architecto. Animi autem, inventore tempora natus non eos, nesciunt nostrum quisquam suscipit voluptate maxime.</div>
+        <div class="card">Card 3</div>
+        <div class="card">Card 4</div>
+        <div class="card">Card 5</div>
+    </div>
+</body>
+</html>
