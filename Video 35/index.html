@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+
+        .boxes *{
+            border: 2px solid black;
+        }
+        /* .box:first-child {
+            background-color: red;
+            color: white;
+        } */
+        /* .box:first-line{
+            color:aqua
+        } */
+
+        /* .box:nth-child(odd){
+            background-color: red;
+            color: white;
+        }
+        .box:nth-child(even){
+            background-color: blue;
+            color: white;
+        } */
+        /* .box:nth-last-child(1){
+            background-color: red;
+            color: white;
+        } */
+        /* .box:nth-of-type(2n+1){
+            background-color: red;
+            color: white;
+        } */
+
+        /* p,a,.box,[data-color="primary"] {
+            color: red;
+        } */
+
+        .boxes::before{
+            content: "This is a before element of boxes class ";
+            color: red;
+            font-size: 20px;
+        }
+        .boxes::after{
+            content: "This is a after element of boxes class ";
+            color: red;
+            font-size: 20px;
+
+            /* these are called pseudo elements.
+            they are used to add some content before or after the element.
+            they are not part of the DOM tree.
+            they are not part of the document flow.
+            they are not part of the element itself.
+            they are used to add some decorative content to the element dynamically.
+            they are used to add some content to the element without adding any extra HTML elements. */
+        }
+
+
+        ::selection{
+            background-color: red;
+            color: white;
+            /* this is used to change the color of the selected text.
+            this is used to change the background color of the selected text. */
+            /* the selection works on the whole document if not specified.
+            it works on the selected text if specified. */
+
+        }
+
+        .box::first-letter{
+            color: rgb(243, 11, 251);
+            font-size: 40px;
+            font-weight: bold;
+            font-family: sans-serif;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 3px black;
+            /* this is used to change the color of the first letter of the element.*/
+        }
+        input::placeholder{
+            color: salmon;
+            font-style: italic;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt vero in tempora ex architecto fugit nulla ipsam nisi fuga! Mollitia ab facere, necessitatibus distinctio corrupti natus voluptatibus sapiente odit maxime harum quos a aperiam numquam et accusamus error alias dolor assumenda molestias dolore dolores. Qui at eveniet commodi eos aspernatur obcaecati! Quis unde beatae quia dolore sapiente ullam, fugiat vero porro? Amet nihil quo inventore facere libero rerum nemo excepturi labore voluptas repudiandae? Alias, iste? Nam cum repellendus, qui consequuntur inventore, aspernatur reiciendis magni quas repellat ex amet error quae harum autem. Ea inventore incidunt aspernatur. Adipisci molestiae temporibus laborum possimus voluptatum accusamus nemo explicabo! Distinctio optio tenetur ducimus, laudantium quidem consectetur animi at aliquid dolore ipsa molestiae iusto obcaecati quaerat, deserunt explicabo provident, repellat minima qui ad. Explicabo, nisi repellat quisquam esse consequuntur placeat ut aspernatur aliquid atque eos saepe minus et cum quidem rerum dolorem quibusdam, animi omnis accusantium, dolores obcaecati nemo necessitatibus. Rem vel, excepturi laborum possimus repellendus ratione, laudantium at nemo iste odit qui aspernatur autem explicabo illo quis modi. Saepe laudantium dolore nobis eum sed nisi nihil. Consectetur, laboriosam optio? Voluptas, iste fugiat amet sapiente facilis consectetur. Non expedita assumenda explicabo nam vero quos recusandae.</div>
+        <div data-color="secondry" class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+
+        <input type="text" placeholder="Enter your name">
+    </div>
+</body>
+</html>
