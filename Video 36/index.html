@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Color Website </title>
+    <style>
+        :root {
+            --primary-color: #000648;
+            --secondary-color: #2e70cc;
+            --background-color: #6c35b9;
+            --text-color: #f10000;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        nav {
+            background-color: var(--primary-color);
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        section:nth-child(odd) {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h1>Welcome to Our Website</h1>
+        <p>Enjoy exploring our colorful design!</p>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We create vibrant and dynamic websites.</p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We offer web design and development services.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out for more information.</p>
+    </section>
+
+</body>
+
+</html>
