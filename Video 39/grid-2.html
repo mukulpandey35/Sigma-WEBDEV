@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS- GRID</title>
+    <style>
+        .container{
+            width: 80vw;
+            height: 80vh;
+            border: 2px solid rgb(18, 18, 9);
+            display: grid;
+            /* grid-template-areas: "nav nav nav"
+                                 "side article article"
+                                 "footer footer footer";*/
+
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* fr is a fraction of the available space in the grid container. */
+            /* 1fr means 1 part of the available space, 2fr means 2 parts of the available space. */
+            /* This means that the first column will take 1 part, the second column will take 2 parts, and the third column will take 1 part of the available space. */
+            grid-template-columns: repeat(4, 1fr); /* 3 columns of equal width */
+            
+            grid-template-columns: repeat(3, 1fr 2fr); /* 3 columns of different width */
+            grid-template-columns: repeat(3,minmax(100px, 1fr)); /* 3 columns of different width */
+
+            /* grid-template-rows: 1fr 1fr; */
+
+            /* gap: 10px 20px ; /* gap between rows and columns */
+            row-gap: 20px;
+            column-gap: 50px;
+
+            justify-items: center; /* center items in the grid area */
+            align-items: center; /* center items in the grid area */
+
+            justify-content: center; /* center the grid area in the container */
+            align-content: center; /* center the grid area in the container */
+
+            place-content: center; /* center the grid area in the container */
+            place-items: center; /* center items in the grid area */
+
+        }
+        .item{
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+        /* .item-1{
+           grid-area: nav;
+
+        }
+        .item-2{
+            grid-area: side;
+        }
+        .item-3{
+            grid-area: article;
+        }
+        .item-4{
+            grid-area: footer;   
+        } */
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+    </div>
+</body>
+</html>
