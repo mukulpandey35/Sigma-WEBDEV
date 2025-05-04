@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Transform</title>
+    <style>
+        .container{
+
+            height: 80vh;
+            width: 100vw;
+            background-color: beige;
+            border: 2px solid rgb(41, 5, 242);
+        }
+        .box{
+            height: 50px;
+            width: 50px;
+            background-color: rgba(130, 149, 22, 0.704);
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* transform: rotate(50deg); */
+
+            /* the degree is the angle of rotation and it ranges from 0 to 360 degrees. */
+
+            /* transform: rotate(.7turn); */
+
+            /* the turn is the fraction of a full rotation. 1 turn = 360 degrees, so 0.25 turn = 90 degrees, 0.5 turn = 180 degrees, and so on. */
+
+
+            /* transform: rotateX(69deg); */
+            /* transform: rotateY(69deg); */
+            /* transform: rotateZ(69deg); */
+
+            /* the X, Y, and Z axes are used to define the rotation in 3D space. The X axis is horizontal, the Y axis is vertical, and the Z axis is perpendicular to the screen. */
+
+
+            /* transform: scale(2); */
+            /* transform: scaleX(2); */
+            /* transform: scaleY(2); */
+            /* transform: scaleZ(2); */
+
+            /* the scale function is used to resize an element. The scale function takes one or two values. If one value is provided, it scales the element uniformly in both directions. If two values are provided, the first value scales the element in the X direction and the second value scales it in the Y direction. */
+            /* If three values are provided, the first value scales the element in the X direction, the second value scales it in the Y direction, and the third value scales it in the Z direction. */
+
+            /* transform: skew(25deg); */
+            /* transform: skewX(25deg); */
+            /* transform: skewY(25deg); */
+
+            /* the skew function is used to slant an element. The skew function takes one or two values. If one value is provided, it skews the element in both directions. If two values are provided, the first value skews the element in the X direction and the second value skews it in the Y direction. */
+            
+
+            /* transform: translate(50%); */
+            /* transform: translateX(50%); */
+            /* transform: translateY(50%); */
+            /* transform: translateZ(50%); */
+
+            /* the translate function is used to move an element. The translate function takes one, two, or three values. If one value is provided, it moves the element in both directions. If two values are provided, the first value moves the element in the X direction and the second value moves it in the Y direction. If three values are provided, the first value moves the element in the X direction, the second value moves it in the Y direction, and the third value moves it in the Z direction. */
+            /* transform: translate(50%, 50%); */
+
+            /* transform: translateY(50%) translateX(50%) rotate(50deg) scale(2) skew(25deg); */
+
+            /* here is the order of the transform function: translate, rotate, scale, skew. The order of the transform functions is important because it affects the final result. The order of the transform functions is applied from bottom to top. This means that the translate function is applied first, then the rotate function, then the scale function, and finally the skew function. */
+
+            /* we can also use the transform function to combine multiple transform functions into one. This is done by separating the transform functions with a space. For example, we can combine the translate, rotate, scale, and skew functions into one transform function like this: */
+            /* transform: translate(50%, 50%) rotate(50deg) scale(2) skew(25deg); */
+
+            transform-origin: 0% 0%;
+            /* the transform-origin property is used to change the position of the origin point of the transformation. The default value is 50% 50%, which means that the origin point is in the center of the element. We can change the origin point to any position by using the transform-origin property. The transform-origin property takes one, two, or three values. If one value is provided, it sets the origin point to that value in both directions. If two values are provided, the first value sets the origin point in the X direction and the second value sets it in the Y direction. If three values are provided, the first value sets the origin point in the X direction, the second value sets it in the Y direction, and the third value sets it in the Z direction. */
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            Box
+        </div>
+    </div>
+</body>
+</html>
