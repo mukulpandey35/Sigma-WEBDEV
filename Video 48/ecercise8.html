@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Animation</title>
+
+    <style>
+        .container{
+            background-color: antiquewhite;
+            position: relative;
+            height: 80vh;
+            width: 90vw;
+            overflow: hidden;
+        }
+        .box{
+            background-color: chartreuse;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            left:0;
+            border-radius: 50%;
+            animation: bounceMove 5s cubic-bezier(0.26, 0.25, 0.98, 0.97) infinite ;
+        }
+
+    @keyframes bounceMove {
+      0% {
+        transform: translate(0, 5px);
+      }
+      15%{
+        transform: translate(10vw,-230px);
+      }
+
+      30% {
+        transform: translate(20vw, 0);
+      }
+      45%{
+        transform: translate(30vw,-230px);
+      }
+      60% {
+        transform: translate(40vw, 0);
+      }
+      75% {
+        transform: translate(60vw, -230px);
+      }
+      88%{
+        transform: translate(75vw,0);
+      }
+      100% {
+        transform: translate(90vw, -230px);
+      }
+    }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+
+        </div>
+    </div>
+</body>
+</html>
