@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS- Object fit and cover</title>
+
+    <style>
+        .container{
+            width: 850px;
+            height: 845px;
+            border: 2px solid black;
+            /* background-color: darkcyan; */
+            /* background-image: url(https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png); */
+            background-position: center center;
+            /* background-position: top ; */
+            /* background-position: top left; */
+            /* background-position: top right; */
+            /* background-position: bottom right; */
+            /* background-position: bottom left; */
+            /* background-position: bottom ; */
+
+            background-image: url(https://st4.depositphotos.com/13324256/19660/i/600/depositphotos_196602840-stock-photo-top-view-violet-gerbera-flower.jpg);
+
+            background-repeat: no-repeat;
+            /* background-repeat: repeat; */
+            /* background-repeat:repeat-x; */
+            /* background-repeat:repeat-y; */
+
+            background-clip: border-box;
+            background-clip: content-box;
+            background-clip: padding-box;
+
+        }
+
+        img{
+            width:450px;
+            height: 480px;
+            object-fit: cover;
+            /* object-position:right; */
+            /* object-position:bottom right; */
+            /* object-position:top right; */
+            /* object-position: top left; */
+            /* object-position: left; */
+            /* object-position: bottom left; */
+
+            /* object-position:10px 20px; */
+            /* object-position:from leftAndRightPx fromtopAndbottomPx; */
+
+
+            /* object-fit: contain; */
+            /* object-fit: fill;  */
+            /* object-fit: scale-down; */
+            
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="https://cdn.pixabay.com/photo/2018/08/04/11/30/draw-3583548_1280.png" alt=""> -->
+    </div>
+</body>
+</html>
