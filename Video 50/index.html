@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Filters</title>
+    <style>
+        .img1 {
+            filter: blur(10px);
+            filter: brightness(1);
+            filter: contrast(1);
+            filter: drop-shadow(16px 16px 20px rgb(126, 49, 49));
+        }
+
+        .img2 {
+            filter: grayscale(0.8);
+        }
+
+        .img3 {
+            filter: hue-rotate(45deg);
+            filter: invert(0.9);
+            filter: opacity(50%);
+            filter: saturate(150%);
+            filter: brightness(2) contrast(0.9);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="img1" src="https://www.w3schools.com/css/img_lights.jpg" alt="">
+        <img class="img2"
+            src="https://as1.ftcdn.net/v2/jpg/02/14/52/44/1000_F_214524451_LXXWMRWQ7glWwoyysjQtlwMNP1Igqnh2.jpg" alt="">
+        <img class="img3"
+            src="https://as2.ftcdn.net/v2/jpg/02/69/18/47/1000_F_269184784_4pnmyHf1jB4uXvoM0ggMNSWAOagpb8bW.jpg" alt="">
+
+    </div>
+</body>
+
+</html>
