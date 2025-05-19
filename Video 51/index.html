@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution of Bounce Animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 80vw;
+            height: 70vh;
+            background-color: cornsilk;
+            position: relative;
+        }
+        .box{
+            width: 80px;
+            height: 80px;
+            background-color: brown;
+            border-radius: 50%;
+            position:absolute;
+            bottom: 0;
+            left: 0;
+            animation: animateX 3s linear infinite,animateY 1s ease-out infinite alternate;
+            /* animation: animateY 1s ease-out infinite alternate; */
+        }
+
+        @keyframes animateX{
+            from{
+                left: 0;
+                background-color: chartreuse;
+            }
+            to{
+                left: 100%;
+                background-color: rgb(234, 255, 1);
+            }
+        }
+        @keyframes animateY{
+            from{
+                bottom: 0;
+                background-color: rgb(226, 43, 183);
+            }
+            to{
+                bottom: 100%;
+                background-color: darkturquoise;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>
